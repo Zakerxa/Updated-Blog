@@ -2,6 +2,7 @@
    <div class="col-12">
       <h1 class="border-bottom p-3"> Latest Posts</h1>
    </div>
+
     @forelse ($blogs as $blog)
         <div class="col-12 col-md-6">
             <div class="m-1 card shadow">

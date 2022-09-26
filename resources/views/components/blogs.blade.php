@@ -1,4 +1,4 @@
-@props(['blogs', 'populars']);
+@props(['blogs', 'populars'])
 
 <div class="container">
     {{-- Search and Filter --}}

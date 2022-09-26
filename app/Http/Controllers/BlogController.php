@@ -24,4 +24,8 @@ class BlogController extends Controller
             'relatives' =>  Category::where('slug', $blog->category->name)->first()->blog->take(3)
         ]);
     }
+
+    function store(Blog $blog){
+
+    }
 }

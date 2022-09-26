@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Blog;
@@ -19,6 +20,9 @@ use App\Models\Category;
 Route::get('/',[BlogController::class,'index']);
 
 Route::get('/blog/{blog:blog_id}', [BlogController::class,'show'])->where('blog', '.*+$');
+Route::post('/blog/{blog:blog_id}', [BlogController::class,'store']);
+Route::get('/register', [AuthController::class,'create']);
+Route::post('/register', [AuthController::class,'store']);
 
 Route::get('/about', function () {
     return view('about');
